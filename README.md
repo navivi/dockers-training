@@ -42,18 +42,10 @@ http://localhost:8080/training/dockers/files/hello.text
 
 dockers-training is a Java based application.  
 
-You must have **docker enging**, **maven** and **JDK-8** installed.
+You must have **docker enging** installed.
 
 
 ## Getting Started
-
-To run dockers-training web server, first install using maven.
-
-```
-mvn install
-```
-
-Once BUILD-SUCCESS you can find uber jar under target/ directory.
 
 Build the image using docker command:
 
