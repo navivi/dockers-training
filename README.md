@@ -3,7 +3,7 @@
 Dockers Training is a simple web server that prints some configuration message.
 It also shows a list of files in some directory and show content of specific files. 
 
-# Examples
+## Examples
 
 1. Landing Page
 ```
@@ -38,14 +38,14 @@ http://localhost:8080/training/dockers/files/hello.text
 ```
 
 ![image](https://user-images.githubusercontent.com/14746328/121021722-56d37b00-c7aa-11eb-868e-0dd5a835a17f.png)
-# Prerequisites
+## Prerequisites
 
 dockers-training is a Java based application.  
 
 You must have **maven** and **JDK-8** installed.
 
 
-# Getting Started
+## Getting Started
 
 To run dockers-training web server, first install using maven.
 
@@ -61,7 +61,7 @@ Run the application using java command:
 java -jar target/dockers-1.0-SNAPSHOT.jar 
 ```
 
-# Next...
+## Next...
 Create Dockerfile from base image: openjdk:8-slim
 
 See: ..
