@@ -42,7 +42,7 @@ http://localhost:8080/training/dockers/files/hello.text
 
 dockers-training is a Java based application.  
 
-You must have **maven** and **JDK-8** installed.
+You must have **docker enging**, **maven** and **JDK-8** installed.
 
 
 ## Getting Started
@@ -55,14 +55,52 @@ mvn install
 
 Once BUILD-SUCCESS you can find uber jar under target/ directory.
 
-Run the application using java command:
+Build the image using docker command:
 
 ```
-java -jar target/dockers-1.0-SNAPSHOT.jar 
+docker build --tag my-image-tag . 
+```
+Run the container using docker command:
+
+```
+docker run --name test -d  my-image-tag
+```
+
+You can inspect the container to get ip it was assigned with:
+```
+docker inspect test | grep IPAddress
+            "SecondaryIPAddresses": null,
+            "IPAddress": "172.17.0.2",
+                    "IPAddress": "172.17.0.2",
+
+```
+
+And then try in the browser:
+
+```
+GET
+
+http://172.17.0.2:8080/training/dockers
+```
+
+You can delete the container using:
+
+```
+docker rm -f test
+```
+
+And run it again by passing it environment variable:
+```
+docker run --name test -d  --env CONFIG_MESSAGE="My new message" my-image-tag
+```
+
+You can run the container again by mounting it some directory from the host:
+```
+docker run --name test -d -p 8888:8080 -v $(pwd)/files:/root --env LOG_LEVEL=DEBUG my-image-tag
 ```
 
 ## Next...
-Create Dockerfile from base image: openjdk:8-slim
+Create 2 stages dockers
 
 See: ..
 
