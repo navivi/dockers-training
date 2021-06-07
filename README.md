@@ -42,7 +42,7 @@ http://localhost:8080/training/dockers/files/hello.text
 
 dockers-training is a Java based application.  
 
-You must have **docker enging** installed.
+You must have **docker engine** installed.
 
 
 ## Getting Started
