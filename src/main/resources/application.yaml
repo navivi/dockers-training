@@ -1,0 +1,12 @@
+
+training:
+  config-message: ${CONFIG_MESSAGE:Hello uuuuu}
+  files-dir: "${HOME}/"
+
+logging:
+  level:
+    ROOT: INFO
+    com.navivi.training: ${LOG_LEVEL:INFO}
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+  pattern.console: "|%p| %d{yyyy-MM-dd HH:mm:ss,sss}  [%t][%X{txn_id}] %c{1}:%L - %m%n"
+
